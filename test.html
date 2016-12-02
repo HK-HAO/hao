@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script type="text/javascript" src="libs/jquery/jquery-2.1.1.min.js"></script>
+	<style type="text/css">
+		span{padding: 10px; background-color: #ccc; margin-right: 5px;}
+	</style>
+</head>
+<body>
+	<div id="pageing"></div>
+	<script type="text/javascript">
+		$(function(){
+			var page = function(_pageindex, _isgenerate){
+				$.get('data/index.txt', {'_': Math.random(), page: _pageindex}, function(response){
+					var obj = JSON.parse(response);
+					var pageCount = obj.totalCount % obj.pageSize > 0 ? parseInt(obj.totalCount / obj.pageSize) + 1 :  parseInt(obj.totalCount / obj.pageSize)
+					var pageFlag = '';
+					if(!_isgenerate){
+						return false;
+					}
+					for(var i = 1; i <= pageCount; i++){
+						pageFlag += ('<span>' + i + '</span>');
+					}
+					$(pageFlag).appendTo('#pageing');
+				})
+			}
+			page(1, true);
+			$('#pageing').on('click', function(evt){
+				page($(evt.target).text());
+			})
+		})
+	</script>
+</body>
+</html>
