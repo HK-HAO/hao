@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<style type="text/css">
+			
+		</style>
+		<link href="css/enroll.css" rel="stylesheet"/>
+		<script src="lib/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/enroll.js" ></script>
+		<script type="text/javascript" src="common/base.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#load-header').load("header.html");
+				$('#load-footer').load("footer.html")
+			})
+		</script>
+	</head>
+	<body>
+		<div id="load-header"></div>
+		<div id="wrap-content">
+			<div class="content">
+				<div class="content-top">
+					<p class="p-1"><b>用户注册</b><span>YIN TAI USER LOGIM</span></p>
+					<p class="p-2"><span>没有银泰帐号？</span><a href="#">马上注册</a></p>
+				</div>
+				<div class="content-main">
+					<div class="main-left">
+						<form>
+							<label>E-mail/手机</label>
+							<input type="text" name="username"/>
+							<p></p>
+							<label>登录密码</label>
+							<input type="password" name="pass"/>
+							<p></p>
+							<label>确认密码</label>
+							<input type="password" name="confirmpass"/>
+							<p></p>
+							<label>验证码</label>
+							<input type="text" />
+							<p style="width: 80px;height: 24px;border: 2px solid orange;font-size: 18px;text-align: center;display: inline-block;"></p>
+							<span style="color: red;font-size: 16px;"></span><br />
+							<input type="submit" value="注册" id="btn"/>
+						</form>	
+					</div>
+					<div class="main-right"></div>
+				<div class="content-bottom">
+					<p>您可以使用合作网站登录:</p>
+					<ul>
+						<li><img src="images/xinlan.jpg"/></li>
+						<li><img src="images/xinlan5.jpg"/></li>
+						<li><img src="images/xinlan3.jpg"/></li>
+						<li><img src="images/xinlan4.jpg"/></li>
+						<li><img src="images/xinlan2.jpg"/></li>
+					</ul>	
+				</div>
+			</div>
+		</div>
+		<div id="load-footer"></div>
+	</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<script src="lib/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.carousel.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#load-header').load('header.html?_='+Math.random());
+				$('#load-footer').load('footer.html?_'+Math.random());
+				Caroursel.init($('.caroursel'));
+			})
+		</script>
+	</head>
+	<body>
+		<div id="load-header"></div>
+		<div id="wrap-main-nav">
+
+			<div class="main-nav">
+				<div class="main-nav-left">
+					<ul class="ul-2">
+						<li>
+							<a href="#" class="a1">名品</a>
+							<a href="#" class="a2">秋冬新款</a>
+							<div class="subnav">
+								<img src=""/>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="a1">女装</a>
+							<a href="#" class="a2">秋冬上新</a>
+							<div class="subnav">
+								秋冬上新
+							</div>
+						</li>
+						<li>
+							<a href="page.html" class="a1">男装</a>
+							<a href="page.html" class="a2">型男专场</a>
+							<div class="subnav">
+								型男专场
+							</div>
+						</li>
+						<li>
+							<a href="#" class="a1">鞋靴</a>
+							<a href="#" class="a2">时尚鞋品</a>
+							<div class="subnav">
+								时尚鞋品
+							</div>
+						</li>
+						<li>
+							<a href="#" class="a1">美妆</a>
+							<a href="#" class="a2">护肤套装</a>
+							<div class="subnav">
+								护肤套装
+							</div>
+						</li>
+						<li>
+							<a href="#" class="a1">箱包</a>
+							<a href="#" class="a2">女神单肩</a>
+							<div class="subnav">
+								女神单肩
+							</div>
+						</li>
+						<li>
+							<a href="#" class="a1">运动</a>
+							<a href="#" class="a2">运动鞋服</a>
+							<div class="subnav">
+								运动鞋服
+							</div>
+						</li>
+						<li>
+							<a href="#" class="a1">配饰</a>
+							<a href="#" class="a2">黄金配饰</a>
+							<div class="subnav">
+								黄金配饰
+							</div>
+						</li>
+						<li>
+							<a href="#" class="a1">婴童</a>
+							<a href="#" class="a2">母婴商品</a>
+							<div class="subnav">
+								母婴商品
+							</div>
+						</li>
+						<li>
+							<a href="#" class="a1">内衣</a>
+							<a href="#" class="a2">舒适内衣</a>
+							<div class="subnav">
+								舒适内衣
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class = "caroursel poster-main" data-setting = '{
+				        "width":953,
+				        "height":490,
+				        "posterWidth":700,
+				        "posterHeight":490,
+				        "scale":0.7,
+				        "dealy":"1800",
+				        "algin":"middle"
+				    }'>
+		        <ul class = "poster-list">
+		            <li class = "poster-item"><img src="images/lubo01.jpg" width = "100%" height="100%"></li>
+		            <li class = "poster-item"><img src="images/lubo02.jpg" width = "100%" height="100%"></li>
+		            <li class = "poster-item"><img src="images/lubo03.jpg" width = "100%" height="100%"></li>
+		            <li class = "poster-item"><img src="images/lubo04.jpg" width = "100%" height="100%"></li>
+		            <li class = "poster-item"><img src="images/lubo05.jpg" width = "100%" height="100%"></li>	            
+		        </ul>
+		        <div class = "poster-btn poster-prev-btn"></div>
+		        <div class = "poster-btn poster-next-btn"></div>
+		    </div>
+			</div>
+			
+		</div>
+		<div id="wrap-content">
+			<div class="centent">
+				<div class="content-left">
+					<div class="content-left-top">
+						<ul>
+							<li class="li-1"><a href="#">特卖</a></li>
+							<li class="li-1"><a href="#">爆款</a></li>
+							<li class="li-1"><a href="#">经典</a></li>
+						</ul>
+					</div>
+					<div class="content-left-bottom">
+						<div class="two-list">
+							<ul>
+								<li><a href="#"><img src="images/05.jpg"/></a></li>
+								<li><a href="#"><img src="images/06.jpg"/></a></li>
+								<li><a href="#"><img src="images/07.jpg"/></a></li>
+								<li><a href="#"><img src="images/08.jpg"/></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content-right">
+					<a href="#"><img src="images/13.jpg"></a>
+				</div>
+			</div>
+		</div>
+		<div id="wrap-content01">
+			<div class="content01">
+				<div class="content01-top">
+					<img src="images/14.jpg"/>
+				</div>
+				<div class="content01-bottom">
+					<div class="content01-left">
+						<img src="images/15.jpg" />
+					</div>
+					<div class="content01-right">
+						<div class="content01-right-top">
+							<ul>
+								<li><a href="#">热门品牌</a></li>
+								<li><a href="#">本周推荐</a></li>
+							</ul>
+						</div>
+						<div class="content01-right-bottom">
+							<ul>
+								<!--<li>
+									<dl>
+										<dt><a href="#"><img src="images/16.jpg"/></a></dt>
+										<dd>
+											<p>八本船宽松连帽拼接卫衣单排扣中长棉衣BBS16A0326</p>
+											<div class="dd-span">
+												<b>￥209</b>
+												<span>参考价：500</span>
+											</div>
+											
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><a href="#"><img src="images/16.jpg"/></a></dt>
+										<dd>
+											<p>八本船宽松连帽拼接卫衣单排扣中长棉衣BBS16A0326</p>
+											<div class="dd-span">
+												<b>￥209</b>
+												<span>参考价：500</span>
+											</div>
+											
+										</dd>
+									</dl>
+								</li>-->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="wrap-content02">
+			<div class="content02">
+				<div class="content02-top">
+					<img src="images/17.jpg" />
+				</div>
+				<div class="content02-bottom">
+					<div class="content02-bottom-left">
+						<div class="left-top">
+							<ul>
+								<li><a href="#">围巾</a></li>
+								<li><a href="#">围巾</a></li>
+								<li><a href="#">围巾</a></li>
+								<li><a href="#">围巾</a></li>
+								<li><a href="#">围巾</a></li>
+								<li><a href="#">围巾</a></li>
+								<li><a href="#">围巾</a></li>
+								<li><a href="#">围巾</a></li>
+								<li><a href="#">围巾</a></li>
+								<li><a href="#">围巾</a></li>
+								<li><a href="#">围巾</a></li>
+								<li><a href="#">围巾</a></li>
+							</ul>
+						</div>
+						<div class="left-bottom">
+							<img src="images/20.jpg" />
+						</div>
+					</div>
+					<div class="content02-bottom-centent">
+						<a href="#"><img src="images/18.jpg"/></a>
+					</div>
+					<div class="content02-bottom-right">
+						<ul>
+							<li><a href="#"><img src="images/19.jpg"/></a></li>
+							<li><a href="#"><img src="images/19.jpg"/></a></li>
+							<li><a href="#"><img src="images/19.jpg"/></a></li>
+							<li><a href="#"><img src="images/19.jpg"/></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="wrap-content03">
+			<div class="content03">
+				<ul>
+					<li><a href="#"><img src="images/21.jpg"/></a></li>
+					<li><a href="#"><img src="images/22.jpg"/></a></li>
+					<li class="last"><a href="#"><img src="images/23.jpg"/></a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="load-footer"></div>
+	</body>
+</html>

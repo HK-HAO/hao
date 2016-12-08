@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="lib/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				function $(id) {
+    return document.getElementById(id);
+} //定义获取ID的方法
+function GotoPage(num) { //跳转页
+    Page = num;
+    OutputHtml();
+}
+var PageSize = 9; //每页个数
+var Page = 1; //当前页码
+function OutputHtml() {
+    var obj = eval(siteList); //获取JSON
+    var sites = obj.sites;
+    //获取分页总数
+    var Pages = Math.floor((sites.length - 1) / PageSize) + 1;
+    if (Page < 1) Page = 1; //如果当前页码小于1
+    if (Page > Pages) Page = Pages; //如果当前页码大于总数
+    var Temp = "";
+    var BeginNO = (Page - 1) * PageSize + 1; //开始编号
+    var EndNO = Page * PageSize; //结束编号
+    if (EndNO > sites.length) EndNO = sites.length;
+    if (EndNO == 0) BeginNO = 0;
+    if (! (Page <= Pages)) Page = Pages;
+    $("total").innerHTML = "Total:<strong class='f90'>" + sites.length + "</strong>  Show:<strong class='f90'>" + BeginNO + "-" + EndNO + "</strong>";
+    //分页
+    if (Page > 1 && Page !== 1) {
+        Temp = "<a href='javascript:void(0)' onclick='GotoPage(1)'><<Index</a> <a href='javascript:void(0)' onclick='GotoPage(" + (Page - 1) + ")'>Previous</a> "
+    } else {
+        Temp = "<<Index Previous "
+    };
+    //完美的翻页列表
+    var PageFrontSum = 3; //当页前显示个数
+    var PageBackSum = 3; //当页后显示个数
+    var PageFront = PageFrontSum - (Page - 1);
+    var PageBack = PageBackSum - (Pages - Page);
+    if (PageFront > 0 && PageBack < 0) PageBackSum += PageFront; //前少后多，前剩余空位给后
+    if (PageBack > 0 && PageFront < 0) PageFrontSum += PageBack; //后少前多，后剩余空位给前
+    var PageFrontBegin = Page - PageFrontSum;
+    if (PageFrontBegin < 1) PageFrontBegin = 1;
+    var PageFrontEnd = Page + PageBackSum;
+    if (PageFrontEnd > Pages) PageFrontEnd = Pages;
+    if (PageFrontBegin != 1) Temp += '<a href="javascript:void(0)" onclick="GotoPage(' + (Page - 10) + ')" title="前10页">..</a>';
+    for (var i = PageFrontBegin; i < Page; i++) {
+        Temp += " <a href='javascript:void(0)' onclick='GotoPage(" + i + ")'>" + i + "</a>";
+    }
+    Temp += " <strong class='f90'>" + Page + "</strong>";
+    for (var i = Page + 1; i <= PageFrontEnd; i++) {
+        Temp += " <a href='javascript:void(0)' onclick='GotoPage(" + i + ")'>" + i + "</a>";
+    }
+    if (PageFrontEnd != Pages) Temp += " <a href='javascript:void(0)' onclick='GotoPage(" + (Page + 10) + ")' title='后10页'>..</a>";
+    if (Page != Pages) {
+        Temp += "  <a href='javascript:void(0)' onclick='GotoPage(" + (Page + 1) + ");'>Next</a> <a href='javascript:void(0)' onclick='GotoPage(" + Pages + ")'>Last>></a>"
+    } else {
+        Temp += "  Next Last>>"
+    }
+    $("pagelist").innerHTML = Temp;
+    //输出数据
+    if (EndNO == 0) { //如果为空
+        $("content").innerHTML += "<h1>No Images</h1>";
+        return;
+    }
+    var html = "";
+    for (var i = BeginNO - 1; i < EndNO; i++) {
+        html += "<div class='entry'>";
+        html += "<a href='" + sites[i].Url + "' rel='bookmark' title=" + sites[i].Name + ">";
+        html += "<img src='" + sites[i].Pic + "' width='200' height='170' />";
+        html += "<p class='url'><span>" + sites[i].Name + "</span></p></a>";
+        html += "</div>";
+    }
+    $("content").innerHTML = html;
+    clickShow(); //调用鼠标点击事件
+    
+    function clickShow() {
+    var links = $("content").getElementsByTagName("a");
+    for (var i = 0; i < links.length; i++) {
+        var url = links[i].getAttribute("href");
+        var title = links[i].getAttribute("title");
+        links[i].onclick = function() {
+            showLink(this);
+            return false;
+        }
+    }
+}
+			})
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

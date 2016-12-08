@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>列表页</title>
+		<link rel="stylesheet" href="css/page.css" />
+		<link href="lib/font-awesome/css/font-awesome.min.css" />
+		<script src="lib/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/page.js" ></script>
+		<script type="text/javascript" src="js/jquery.page.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				$('#load-header').load("header.html");
+				$('#load-footer').load("footer.html");
+				$.ajax({
+		          			type:"get",
+		          			url:"json/data-1.json",
+		          			async:true,
+		          			success:function(data){
+			          				var jsonObj=typeof data=="string"?JSON.parse(data):data;
+			          				var a=Math.ceil(data.totalCount/data.pageSize);
+//			          				$(".product-bottom").Page({
+//									
+//						          	  totalPages: a,//分页总数
+//							          liNums: 7,//分页的数字按钮数(建议取奇数)
+//							          activeClass: 'activP', //active 类样式定义
+//							          callBack : function(page){
+//							          		console.log(page);	
+//							          		
+//							          }
+//							    });
+		          			}
+		          	});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="load-header"></div>
+		<div id="wrap-kind">
+			<div class="kind">
+				<div class="kind-top">
+					<div class="top-a">
+						<a href="#">名品</a>
+						<a href="#">男装</a>
+					</div>
+					<div class="top-span">
+						(全部商品<span>1000</span>款，品牌<span>50</span>个)
+					</div>	
+				</div>
+				<div class="kind-bottom">
+					<ul id="ul-1">
+						<li class="li-1">
+							<p>品牌:</p>
+							<ul id="ul-2">
+								<li><a href="#">VERSACE</a></li>
+								<li><a href="#">VERSACE</a></li>
+								<li><a href="#">VERSACE</a></li>
+								<li><a href="#">VERSACE</a></li>
+								<li><a href="#">VERSACE</a></li>
+								<li><a href="#">VERSACE</a></li>
+							</ul>
+						</li>
+						<li class="li-1">
+							<p>色系:</p>
+							<ul id="ul-2">
+								<li><a href="#">红色</a></li>
+								<li><a href="#">蓝色</a></li>
+								<li><a href="#">黄色</a></li>
+								<li><a href="#">黑色</a></li>
+								<li><a href="#">屎黄色</a></li>
+								<li><a href="#">黑色</a></li>
+								<li><a href="#">屎黄色</a></li>
+							</ul>
+						</li>
+						<li class="li-1" style="border: none;">
+							<p>价格:</p>
+							<ul id="ul-2">
+								<li><a href="#">2000-3000元</a></li>
+								<li><a href="#">3000-4000元</a></li>
+								<li><a href="#">4000-5000元</a></li>
+								<li>
+									<form>
+										<input type="text" placeholder="￥" /> - 
+										<input type="text" placeholder="￥" />
+										<input type="submit" value="确认" class="sub"/>
+									</form>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="wrap-product">
+			<div class="product">
+				<div class="product-top">
+					<ul id="ul-3">
+						<li style="background: #e5004f;color: #fff;"><a href="#" style="color: #fff;">默认</a></li>
+						<li><a href="#">销量</a></li>
+						<li><a href="#">折扣</a></li>
+						<li><a href="#">价格</a></li>
+						<li>
+							<a href="#">海淘产品</a>
+							<a href="#">特卖</a>
+							<a href="#">喵货</a>
+						</li>
+						<li class="last">
+							<input type="text"  class="txt"/>
+							<input type="submit"  class="sub" value=""/>
+						</li>
+						<p><i class="fa fa-toggle-left"></i>1/4<i class="fa fa-toggle-right"></i></p>
+					</ul>
+					<p class="product-top-p">按颜色显示</p>
+				</div>
+				<div class="product-conter">
+					<ul id="ul-4">
+						<!--<li>
+							<a href="javascript:">
+								<dl>
+									<dt>
+										<img src="images/27.jpg"/>
+									</dt>
+									<dd>
+										<p class="p-1"><span class="sp-1">￥9000</span><span  class="sp-2">￥12000</span></p>
+										<p class="p-2">JASONWOOD/坚持我的男士植物印花拼布长袖衬衫151105307</p>
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<dl>
+									<dt>
+										<img src="images/27.jpg"/>
+									</dt>
+									<dd>
+										<p class="p-1"><span class="sp-1">￥9000</span><span  class="sp-2">￥12000</span></p>
+										<p class="p-2">JASONWOOD/坚持我的男士植物印花拼布长袖衬衫151105307</p>
+									</dd>
+								</dl>
+							</a>
+						</li>-->
+					</ul>
+				</div>
+				<div class="product-bottom">
+					
+				</div>
+			</div>
+		</div>
+		<div id="load-footer"></div>
+	</body>
+</html>

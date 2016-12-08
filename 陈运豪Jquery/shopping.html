@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" href="css/shopping.css" />
+		<script type="text/javascript" src="lib/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/shopping.js" ></script>
+		<script src="common/base.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#load-header').load('header.html');
+				$('#load-footer').load('footer.html');
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="load-header"></div>
+		<div id="wrap-shopping">
+			<div class="shopping">
+				<h3>订单中心</h3>
+				<table class="tab" >
+					<thead>
+						<th>商品名</th>
+						<th>件数</th>
+						<th>商品价格</th>
+						<th>操作</th>
+					</thead>
+					<tbody>
+						<!--<tr>
+							<td><img src="images/01.jpg"\></img\><span>1111111111111111111111111111111111111111<span></td>
+							<td class="td-2">
+								<div class="div-1">
+									<span>-</span>
+									<input type="text" name="" id="" value="1" />
+									<span>+</span>
+								</div>
+							</td>
+							<td class="td-3">3</td>
+							<td class="td-4"><a href="#">删除</a></td>
+						</tr>-->
+					</tbody>
+				</table>
+				<div class="shopping-bottom">
+					<p>订单总额：<span class="sp-1">0</span>总件数：<span class="sp-1">0</span></p>
+					<span class="sp-3">结算</span>
+					
+				</div>
+			</div>
+		</div>
+		<div id="load-footer"></div>
+	</body>
+</html>

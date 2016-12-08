@@ -1,0 +1,95 @@
+/** 清除内外边距 **/
+body,h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+
+#wrap-shopping{
+	background: #fff;
+	overflow: hidden;
+}
+.shopping{
+	width: 1190px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.shopping h3{
+	font-size: 20px;
+	padding: 50px;
+}
+.shopping .tab{
+	border: 1px solid #ccc;
+	border-collapse:collapse ;
+	margin: 0 auto;
+	width:1000px
+}
+.shopping .tab th{
+	padding:10px ;
+}
+.shopping .tab td{
+	border: 1px solid #ccc;
+	padding:10px ;
+
+}
+.shopping .tab td img{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+}
+.shopping .tab .div-1{
+	width: 70px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+}
+.shopping .tab .div-1 input{
+	float: left;
+	width: 30px;
+	height: 16px;
+	border: none;
+	outline: none;
+}
+.shopping .tab .div-1 span{
+	display: inherit;
+	float: left;
+	width: 20px;
+	height: 16px;
+	line-height: 20px;
+	text-align: center;
+	background: #ccc;
+}
+.shopping-bottom{
+	width: 1000px;
+	margin: 50px auto;
+}
+.shopping-bottom p{
+	display: inline-block;
+	width: 500px;
+	height: 40px;
+	line-height: 40px;
+	background: #eee;
+	font-size: 20px;
+}
+.shopping-bottom p .sp-1,.sp-2{
+	display: inline-block;
+	width: 100px;
+	
+}
+.shopping-bottom .sp-3{
+	
+	display: inline-block;
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	background: orange;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}

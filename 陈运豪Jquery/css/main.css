@@ -1,0 +1,304 @@
+/** 清除内外边距 **/
+body,h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+ul,li{list-style: none;}
+
+#wrap-main-nav{
+	width: 1307px;
+	height: 490px;
+}
+
+#wrap-main-nav .main-nav{
+	width: 1190px;
+	margin: 0 55px;
+}
+
+#wrap-main-nav .main-nav-left{
+	float: left;
+	width: 220px;
+	height: 490px;
+	background: #18171e;
+}
+#wrap-main-nav .main-nav-left{
+	display: block;
+}
+#wrap-main-nav .main-nav-left .ul-2 li{
+	width: 220px;
+	height: 48px;
+	border-bottom:1px solid #ccc;
+}
+#wrap-main-nav .main-nav-left .ul-2 li>.a1{
+	display: inline-block;
+	width:80px;
+	font-size: 20px;
+	color: #FFF;
+	text-align: center;
+	border-right: 1px solid #fff;
+	margin-top:10px ;
+	
+	
+}
+#wrap-main-nav .main-nav-left .ul-2 li>.a2{
+	margin-left: 14px;
+	color: #FFF;
+}
+#wrap-main-nav .main-nav-left .ul-2 li:hover{
+	background: #dfe61e;
+}
+#wrap-main-nav .main-nav-left .ul-2{position: relative;}
+#wrap-main-nav .main-nav-left .ul-2 li .subnav{
+	width: 300px;
+	height: 300px;
+	background:  #18171e;
+	position: absolute;
+	left: 220px;top: 0;
+	z-index:2;
+	color: #fff;
+	text-align: center;
+	display: none;
+}
+#wrap-main-nav .main-nav-left .ul-2 li:hover .subnav{display: block;}
+.poster-main{position: relative;width: 1307px;height: 427px;margin-left: 220px;z-index: 1;}
+.poster-main a,.poster-main img{display:block;}
+.poster-main .poster-list{width: 1000px;height: 427px}
+.poster-main .poster-list .poster-item{position: absolute;left: 0px;top: 0px;z-index: 1;}
+.poster-main .poster-btn{position: absolute;height: 100%;width:100px;top: 0px;z-index: 10;opacity: 0.3;}
+.poster-main .poster-prev-btn{ left:0; background: url("../images/btn_l.png") no-repeat center center; background-color: #000 }
+.poster-main .poster-next-btn{right: 0;background: url("../images/btn_r.png") no-repeat center center;background-color:#000}
+
+
+#wrap-content{}
+#wrap-content .centent{
+	width: 1190px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.content-left{
+	float: left;
+	width: 910px;
+	height: 324px;
+	position: relative;
+}
+#wrap-content .content-left-top ul{
+	height: 52px;
+	
+}
+#wrap-content .content-left-top ul .li-1{
+	width: 300px;
+	float: left;
+	text-align: center;
+	border-bottom: 4px solid #333;
+}
+#wrap-content .content-left-top ul .li-1 a{
+	height: 47px;
+	line-height: 47px;
+	font-size: 20px;
+	color: #000;
+}
+#wrap-content .content-left-top ul .li-1:hover{
+	border-bottom: 4px solid #e5004f;
+	font-weight: bold;
+}
+#wrap-content .content-left-bottom .two-list{
+	width: 910px;
+	height: 260px;
+}
+#wrap-content .content-left-bottom .two-list ul li{
+	width: 216px;
+	height: 260px;
+	float: left;
+	border: 1px solid #3C3C3C;
+	margin-right: 8px;
+	overflow: hidden;
+	
+}
+
+.content-right{
+	float: left;
+	width: 270px;
+	height: 304px;
+	margin-top: 30px;
+}
+
+
+
+#wrap-content01{}
+.content01{
+	width: 1190px;
+	margin: 0 auto;
+	overflow: hidden;
+	
+}
+.content01-top{
+	height: 42px;
+	margin-bottom: 10px;
+}
+.content01-bottom{
+	width: 1180px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+}
+.content01-left{
+	float: left;
+	width: 340px;
+	height: 556px;
+	margin: 10px 0 10px 10px;
+	border: 1px solid #CCCCCC;
+}
+.content01-right{
+	margin-left: 10px;
+	width: 817px;
+	float: left;
+}
+.content01-right .content01-right-top ul{
+	
+	height: 38px;
+	width: 817px;
+	
+}
+.content01-right .content01-right-top ul li{
+	height: 33px;
+	line-height: 33px;
+	float:left;
+	width: 105px;
+	border-bottom: 5px solid #333;
+	text-align: center;
+	
+}
+.content01-right .content01-right-top ul li:hover{
+	border-bottom: 5px solid #e70050;
+}
+.content01-right .content01-right-top ul li a{
+	
+}
+.content01-right .content01-right-bottom ul{
+	
+	margin-top:14px ;
+}
+.content01-right .content01-right-bottom ul li{
+	float: left;
+	width: 190px;
+	height: 240px;
+	border: 1px solid #CCCCCC;
+	margin:0 10px 10px 0;
+}
+.content01-right .content01-right-bottom ul li dl dt{
+	width: 190px;
+	text-align: center;
+	
+}
+.content01-right .content01-right-bottom ul li dl dd{
+	width:190px;
+	height: 37px;
+	background: #EEEEEE;
+}
+.content01-right .content01-right-bottom ul li dl dd p{
+	width: 190px;
+	height: 15px;
+	overflow: hidden;
+}
+.content01-right .content01-right-bottom ul li dl dd .dd-span{
+	width: 180px;
+	overflow: hidden;
+	margin-top:4px ;
+}
+.content01-right .content01-right-bottom ul li dl dd .dd-span b{
+	display: inline-block;
+	color: #e70050;
+	width: 60px;
+	float: left;
+}
+.content01-right .content01-right-bottom ul li dl dd .dd-span span{
+	display: inline-block;
+	width: 80px;
+	float: right;
+}
+#wrap-content02{margin-bottom: 30px;}
+.content02{
+	width: 1190px;
+	height: 456px;
+	border: 1px solid red;
+	margin: 0 auto;
+}
+.content02-top{
+	margin: 30px 0 14px 0;
+}
+.content02-bottom{
+	overflow: hidden;
+}
+.content02-bottom-left{
+	float: left;
+	width: 230px;
+	height: 370px;
+	border: 1px solid #E0E0E0;
+	
+}
+.content02-bottom-left .left-top{
+	width: 214px;
+	height: 146px;
+	margin: 16px 0 0 11px;
+}
+.content02-bottom-left .left-top ul{
+
+}
+.content02-bottom-left .left-top ul li{
+	float: left;
+	width: 62px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	border: 1px solid #C0C0C0;
+	margin: 0 6px 4px 0;
+}
+.content02-bottom-left .left-top ul li a{
+	color: #666;
+}
+.content02-bottom-left .left-top ul li:hover{
+	background: #E5004F;
+}
+.content02-bottom-left .left-bottom{
+	margin: 25px 0 0 16px;
+}
+.content02-bottom-centent{
+	float: left;
+	margin-left: 8px;
+	width: 390px;
+	height: 370px;
+	border: 1px solid #eee ;
+}
+.content02-bottom-right{
+	width: 554px;
+	height: 374px;
+	float: left;
+	
+}
+.content02-bottom-right ul{}
+.content02-bottom-right ul li{
+	float: left;
+	width: 270px;
+	height: 180px;
+	border: 1px solid #eee;
+	margin: 4px 1px 0 0;
+}
+#wrap-content03{}
+.content03{
+	width: 1190px;
+	height: 170px;
+	margin: 0 auto;
+	margin-bottom: 52px;
+	border: 1px solid #eee;
+}
+.content03 ul li{
+	float: left;
+	border-right: 1px solid #ccc;
+}
+.content03 ul .last{
+	border: none;
+}
